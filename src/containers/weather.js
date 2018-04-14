@@ -1,24 +1,24 @@
 import React, {Component} from 'react';
 import {Row, Col} from 'reactstrap';
-import WeatherDisplay from "../components/weatherDisplay";
+import WeatherCard from "../components/weatherCard";
 
 class Weather extends Component {
     render() {
         return <Row>
             <Col sm={12} md={2}>
-                <WeatherDisplay/>
+                <WeatherCard/>
             </Col>
             <Col sm={12} md={2}>
-                <WeatherDisplay/>
+                <WeatherCard/>
             </Col>
             <Col sm={12} md={2}>
-                <WeatherDisplay/>
+                <WeatherCard/>
             </Col>
             <Col sm={12} md={2}>
-                <WeatherDisplay/>
+                <WeatherCard/>
             </Col>
             <Col sm={12} md={2}>
-                <WeatherDisplay/>
+                <WeatherCard/>
             </Col>
         </Row>
     }

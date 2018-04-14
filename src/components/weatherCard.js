@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Col, Card, CardText, CardBody, CardTitle, CardSubtitle} from 'reactstrap';
 
-class WeatherDisplay extends Component {
+class WeatherCard extends Component {
     render() {
         return <Card>
                 <CardBody>
@@ -12,4 +12,4 @@ class WeatherDisplay extends Component {
     }
 }
 
-export default WeatherDisplay;
+export default WeatherCard;
