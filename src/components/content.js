@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Row, Col} from 'reactstrap';
 
 const contentStyles = {
-    minHeight: '90vh',
+    minHeight: '70vh',
     backgroundColor: '#dfe3e6'
 };
 
