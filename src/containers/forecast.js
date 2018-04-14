@@ -10,7 +10,7 @@ class Forecast extends Component {
         let temperatures = [];
         let labels = [];
         data.list.forEach((item) => {
-            labels.push(item.dt);
+            labels.push(new Date(item.dt * 1000).toLocaleString());
             temperatures.push(item.main.temp);
         });
         return {
