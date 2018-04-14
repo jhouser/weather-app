@@ -11,7 +11,6 @@ class SearchBar extends Component {
             <Col style={searchStyles} sm={12} md={6}>
                 <Form>
                     <FormGroup>
-                        <Label for="location">Location</Label>
                         <Input type="text" name="location" id="location" placeholder="Enter your location!"/>
                     </FormGroup>
                 </Form>
