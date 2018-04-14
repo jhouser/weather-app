@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Row, Col} from 'reactstrap';
 import SearchBar from "./searchBar";
 import Forecast from "../containers/forecast";
+import Current from "../containers/current";
 
 const contentStyles = {
     minHeight: '70vh',
@@ -14,6 +15,7 @@ class Content extends Component {
             <Col>
                 <div style={contentStyles}>
                     <SearchBar/>
+                    <Current/>
                     <Forecast/>
                 </div>
             </Col>
