@@ -7,7 +7,7 @@ const headerStyle = {
 
 class Header extends Component {
     render() {
-        return <Navbar style={headerStyle} expand="md" dark color="dark" className="header">
+        return <Navbar style={headerStyle} expand="md" dark color="primary" className="header">
             <NavbarBrand to="/">The Weather</NavbarBrand>
         </Navbar>
     }
