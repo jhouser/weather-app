@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Row, Col} from 'reactstrap';
 import WeatherCard from "../components/weatherCard";
 
-class Weather extends Component {
+class Forecast extends Component {
     render() {
         return <Row>
             <Col sm={12} md={2}>
@@ -24,4 +24,4 @@ class Weather extends Component {
     }
 }
 
-export default Weather;
+export default Forecast;
