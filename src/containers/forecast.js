@@ -35,6 +35,7 @@ class Forecast extends Component {
     render() {
         return <Row>
             <Col>
+                <h2>Forecast</h2>
                 <Line data={this.state.data} style={{width: "100%"}}/>
             </Col>
         </Row>
