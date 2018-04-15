@@ -20,6 +20,18 @@ const weatherReducer = (state = initialState, action) => {
                 fetching: false,
                 current: action.payload
             };
+        case weather.FORECAST_REQUEST:
+            return {
+                ...state,
+                fetching: true,
+                forecast: null,
+            };
+        case weather.FORECAST_SUCCESS:
+            return  {
+                ...state,
+                fetching: false,
+                forecast: action.payload
+            };
         default:
             return state
     }
