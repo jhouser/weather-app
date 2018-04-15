@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Row, Col} from 'reactstrap';
-import currentData from '../fixtures/current.json';
 
 const imageStyles = {
     float: "left",
