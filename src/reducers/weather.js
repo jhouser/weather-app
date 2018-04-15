@@ -7,6 +7,11 @@ const initialState = {
 
 const weatherReducer = (state = initialState, action) => {
     switch (action.type) {
+        case weather.CURRENT_REQUEST:
+            return {
+                ...state,
+                current: null,
+            };
         case weather.CURRENT_SUCCESS:
             const name = action.payload.name;
             let newState = {
@@ -14,6 +19,7 @@ const weatherReducer = (state = initialState, action) => {
                 current: action.payload
             };
             newState[name] = action.payload;
+            console.log(newState);
             return newState;
         default:
             return state
