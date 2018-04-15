@@ -6,12 +6,30 @@ const searchStyles = {
 };
 
 class SearchBar extends Component {
+    state = {
+        location: ''
+    };
+
+    handleInputChange = (event) => {
+        const target = event.target,
+            value = target.value,
+            name = target.name;
+        this.setState({
+            [name]: value
+        });
+    };
+
+    onSubmit = (event) => {
+        event.preventDefault();
+        this.props.onSubmit(this.state.location)
+    };
+
     render() {
         return <Row>
             <Col style={searchStyles} sm={12} md={6}>
-                <Form>
+                <Form onSubmit={this.onSubmit}>
                     <FormGroup>
-                        <Input type="text" name="location" id="location" placeholder="Enter your location!"/>
+                        <Input onChange={this.handleInputChange} type="text" name="location" id="location" placeholder="Enter your location!"/>
                     </FormGroup>
                 </Form>
                 <Button>Submit</Button>
@@ -20,4 +38,4 @@ class SearchBar extends Component {
     }
 }
 
-export default SearchBar
+export default SearchBar;

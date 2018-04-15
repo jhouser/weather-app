@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Row, Col} from 'reactstrap';
-import SearchBar from "./searchBar";
+import SearchContainer from "../containers/searchContainer";
 import Forecast from "../containers/forecast";
 import Current from "../containers/current";
 
@@ -14,7 +14,7 @@ class Content extends Component {
         return <Row>
             <Col>
                 <div style={contentStyles}>
-                    <SearchBar/>
+                    <SearchContainer/>
                     <Current/>
                     <Forecast/>
                 </div>
