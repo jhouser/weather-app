@@ -1,8 +1,6 @@
 import * as weather from '../actions/weather'
 
-const initialState = {
-
-};
+const initialState = {};
 
 const weatherReducer = (state = initialState, action) => {
     switch (action.type) {
