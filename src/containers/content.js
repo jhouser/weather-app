@@ -8,7 +8,9 @@ import Current from "../containers/current";
 class ContentContainer extends Component {
     render() {
         if (!this.props.fetching && !this.props.showWeather) {
-            return <SearchContainer/>
+            return <div className="content">
+                    <SearchContainer/>
+                </div>
         }
         return <div className="content">
             <SearchContainer/>
