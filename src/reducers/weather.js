@@ -31,4 +31,6 @@ export const showWeather = (state) => state.weather.current != null;
 
 export const currentWeather = (state) => state.weather.current;
 
+export const weatherForecast = (state) => state.weather.forecast;
+
 export default weatherReducer;

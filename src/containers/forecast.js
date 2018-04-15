@@ -1,45 +1,18 @@
 import React, {Component} from 'react';
-import {Row, Col} from 'reactstrap';
-import forecastData from '../fixtures/forecast.json';
-import {Line} from 'react-chartjs-2';
+import {connect} from 'react-redux';
+import Forecast from "../components/forecast";
+import {weatherForecast} from "../reducers/weather";
+import {Loading} from '../components/loading';
 
-class Forecast extends Component {
-    state = {};
-
-    configureTemperatureChart(data) {
-        let temperatures = [];
-        let labels = [];
-        data.list.forEach((item) => {
-            labels.push(new Date(item.dt * 1000).toLocaleString());
-            temperatures.push(item.main.temp);
-        });
-        return {
-            labels: labels,
-            datasets: [
-                {
-                    label: "Temperature",
-                    fill: false,
-                    borderColor: '#007bff',
-                    backgroundColor : '#007bff',
-                    data: temperatures
-                }
-            ]
-        };
-    }
-
-    componentDidMount() {
-        const data = this.configureTemperatureChart(forecastData);
-        this.setState({data: data})
-    }
-
+class ForecastContainer extends Component {
     render() {
-        return <Row>
-            <Col>
-                <h2>Forecast</h2>
-                <Line data={this.state.data} style={{width: "100%"}}/>
-            </Col>
-        </Row>
+        const weather = this.props.data || {};
+        if (!this.props.data) {
+            return <Loading />
+        }
+        return <Forecast data={weather}/>
+
     }
 }
 
-export default Forecast;
+export default connect(state =>({data: weatherForecast(state)}))(ForecastContainer);
