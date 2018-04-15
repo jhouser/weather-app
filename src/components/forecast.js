@@ -2,6 +2,27 @@ import React, {Component} from 'react';
 import {Row, Col} from 'reactstrap';
 import {Line} from 'react-chartjs-2';
 
+const chartOptions = {
+    scales: {
+        yAxes: [{
+            scaleLabel: {
+                display: true,
+                labelString: 'Temperature'
+            }
+        }]
+    },
+    legend: {
+        display: false
+    },
+    tooltips: {
+        callbacks: {
+           label: function(tooltipItem) {
+                  return tooltipItem.yLabel;
+           }
+        }
+    }
+};
+
 class Forecast extends Component {
     state = {};
 
@@ -18,10 +39,9 @@ class Forecast extends Component {
             labels: labels,
             datasets: [
                 {
-                    label: "Temperature",
-                    fill: false,
+                                        fill: false,
                     borderColor: '#007bff',
-                    backgroundColor : '#007bff',
+                    backgroundColor: '#007bff',
                     data: temperatures
                 }
             ]
@@ -37,8 +57,8 @@ class Forecast extends Component {
     render() {
         return <Row>
             <Col>
-                <h2>Forecast</h2>
-                <Line data={this.state.data} style={{width: "100%"}}/>
+                <h2>Temperature Forecast</h2>
+                <Line data={this.state.data} options={chartOptions} style={{width: "100%"}}/>
             </Col>
         </Row>
     }
