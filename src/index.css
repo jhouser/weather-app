@@ -4,6 +4,10 @@ body {
   font-family: sans-serif;
 }
 
+.content > .row {
+  padding: 20px;
+}
+
 .loading:empty {
   position: absolute;
   top: calc(50% - 4em);

@@ -10,7 +10,7 @@ class ContentContainer extends Component {
         if (!this.props.fetching && !this.props.showWeather) {
             return <SearchContainer/>
         }
-        return <div>
+        return <div className="content">
             <SearchContainer/>
             <Current/>
             <Forecast/>
