@@ -31,8 +31,8 @@ class SearchBar extends Component {
                     <FormGroup>
                         <Input onChange={this.handleInputChange} type="text" name="location" id="location" placeholder="Enter your location!"/>
                     </FormGroup>
+                    <Button type="submit">Submit</Button>
                 </Form>
-                <Button>Submit</Button>
             </Col>
         </Row>
     }
