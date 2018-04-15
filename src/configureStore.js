@@ -1,4 +1,4 @@
-import reducers from './reducers/core'
+import reducers from './reducers/weather'
 import { applyMiddleware, createStore, combineReducers } from 'redux'
 import {routerMiddleware, routerReducer} from 'react-router-redux'
 import createHistory from 'history/createBrowserHistory'
