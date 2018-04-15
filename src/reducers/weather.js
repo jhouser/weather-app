@@ -22,6 +22,8 @@ const weatherReducer = (state = initialState, action) => {
     }
 };
 
+export const showWeather = (state) => state.weather.current != null;
+
 export const currentWeather = (state) => state.weather.current;
 
 export default weatherReducer;
