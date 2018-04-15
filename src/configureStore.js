@@ -1,4 +1,4 @@
-import reducers from './reducers/weather'
+import weatherReducer from './reducers/weather'
 import { applyMiddleware, createStore, combineReducers } from 'redux'
 import { apiMiddleware } from 'redux-api-middleware'
 import {routerMiddleware, routerReducer} from 'react-router-redux'
@@ -9,7 +9,7 @@ const history = createHistory();
 
 const store = createStore(
     combineReducers({
-        ...reducers,
+        weather: weatherReducer,
         routing: routerReducer
     }),
     {},
