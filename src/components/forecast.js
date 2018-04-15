@@ -7,7 +7,7 @@ const chartOptions = {
         yAxes: [{
             scaleLabel: {
                 display: true,
-                labelString: 'Temperature'
+                labelString: 'Temperature (°C)'
             }
         }]
     },
